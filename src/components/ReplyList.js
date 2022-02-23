@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-filename-extension */
 import React, { useState } from 'react'
-import Post from './Post'
+import Reply from './Reply'
 
 
 
@@ -8,7 +8,7 @@ const FinalReplyList = ({ replyList }) => {
   return (
     <div >
       {replyList.map((reply, ind) => (
-          <Post key = {ind} reply={reply}></Post>
+          <Reply key = {ind} reply={reply}></Reply>
       ))}
     </div>
   )

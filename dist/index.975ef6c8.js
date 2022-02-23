@@ -22796,7 +22796,7 @@ const App = ()=>{
             /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_titleDefault.default, {
             }, void 0, false, {
                 fileName: "src/App.js",
-                lineNumber: 14,
+                lineNumber: 16,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_inputDefault.default, {
@@ -22804,14 +22804,14 @@ const App = ()=>{
                 setPosts: setPosts
             }, void 0, false, {
                 fileName: "src/App.js",
-                lineNumber: 15,
+                lineNumber: 17,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_postListDefault.default, {
                 posts: posts
             }, void 0, false, {
                 fileName: "src/App.js",
-                lineNumber: 16,
+                lineNumber: 18,
                 columnNumber: 7
             }, undefined)
         ]
@@ -23201,9 +23201,14 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
+var _input = require("./Input");
+var _inputDefault = parcelHelpers.interopDefault(_input);
+var _replyList = require("./ReplyList");
+var _replyListDefault = parcelHelpers.interopDefault(_replyList);
 var _s = $RefreshSig$();
 const Post = ({ post  })=>{
     _s();
+    const [replies, setReplies] = _reactDefault.default.useState([]);
     const [votes, setVotes] = _react.useState(0);
     const upVote = ()=>{
         setVotes(votes + 1);
@@ -23221,14 +23226,14 @@ const Post = ({ post  })=>{
                 ]
             }, void 0, true, {
                 fileName: "src/components/Post.js",
-                lineNumber: 18,
+                lineNumber: 26,
                 columnNumber: 5
             }, undefined),
             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("p", {
                 children: post.content
             }, void 0, false, {
                 fileName: "src/components/Post.js",
-                lineNumber: 19,
+                lineNumber: 27,
                 columnNumber: 5
             }, undefined),
             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("button", {
@@ -23236,14 +23241,14 @@ const Post = ({ post  })=>{
                 children: "Up-vote"
             }, void 0, false, {
                 fileName: "src/components/Post.js",
-                lineNumber: 22,
+                lineNumber: 30,
                 columnNumber: 5
             }, undefined),
             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("p", {
                 children: votes
             }, void 0, false, {
                 fileName: "src/components/Post.js",
-                lineNumber: 23,
+                lineNumber: 31,
                 columnNumber: 5
             }, undefined),
             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("button", {
@@ -23251,13 +23256,28 @@ const Post = ({ post  })=>{
                 children: "Down-vote"
             }, void 0, false, {
                 fileName: "src/components/Post.js",
-                lineNumber: 24,
+                lineNumber: 32,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_inputDefault.default, {
+                posts: replies,
+                setPosts: setReplies
+            }, void 0, false, {
+                fileName: "src/components/Post.js",
+                lineNumber: 33,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_replyListDefault.default, {
+                replies: replies
+            }, void 0, false, {
+                fileName: "src/components/Post.js",
+                lineNumber: 34,
                 columnNumber: 5
             }, undefined)
         ]
     }, void 0, true));
 };
-_s(Post, "kMi8iclqmRZYG47RjELkRBV1xeA=");
+_s(Post, "fibNPxKd4jyzOTXcyxq3BHCfNq8=");
 _c = Post;
 exports.default = Post;
 var _c;
@@ -23268,6 +23288,164 @@ $RefreshReg$(_c, "Post");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["kn9T2","7nZVA","8lqZg"], "8lqZg", "parcelRequire37d1")
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./Input":"irpU3","./ReplyList":"6ESYg"}],"6ESYg":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$915a = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$915a.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+/* eslint-disable react/jsx-filename-extension */ var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reply = require("./Reply");
+var _replyDefault = parcelHelpers.interopDefault(_reply);
+const FinalReplyList = ({ replyList  })=>{
+    return(/*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+        children: replyList.map((reply, ind)=>/*#__PURE__*/ _jsxDevRuntime.jsxDEV(_replyDefault.default, {
+                reply: reply
+            }, ind, false, {
+                fileName: "src/components/ReplyList.js",
+                lineNumber: 11,
+                columnNumber: 11
+            }, undefined)
+        )
+    }, void 0, false, {
+        fileName: "src/components/ReplyList.js",
+        lineNumber: 9,
+        columnNumber: 5
+    }, undefined));
+};
+_c = FinalReplyList;
+const ReplyList = ({ replies  })=>{
+    // const addPost= post => {
+    //   const oldposts = state.posts
+    //   const newposts = oldposts.push(post)
+    //   setState({
+    //     posts: newposts,
+    //   })
+    // }
+    let replyList = replies;
+    return(/*#__PURE__*/ _jsxDevRuntime.jsxDEV(FinalReplyList, {
+        replyList: replyList
+    }, void 0, false, {
+        fileName: "src/components/ReplyList.js",
+        lineNumber: 30,
+        columnNumber: 10
+    }, undefined));
+};
+_c1 = ReplyList;
+exports.default = ReplyList;
+var _c, _c1;
+$RefreshReg$(_c, "FinalReplyList");
+$RefreshReg$(_c1, "ReplyList");
+
+  $parcel$ReactRefreshHelpers$915a.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./Reply":"iKa0n"}],"iKa0n":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$0dea = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$0dea.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _input = require("./Input");
+var _inputDefault = parcelHelpers.interopDefault(_input);
+var _postList = require("./PostList");
+var _postListDefault = parcelHelpers.interopDefault(_postList);
+var _s = $RefreshSig$();
+const Reply = ({ reply , setReply  })=>{
+    _s();
+    const [state, setState] = _reactDefault.default.useState([]);
+    const [votes, setVotes] = _react.useState(0);
+    const upVote = ()=>{
+        setVotes(votes + 1);
+    };
+    const downVote = ()=>{
+        setVotes(votes - 1);
+    };
+    return(/*#__PURE__*/ _jsxDevRuntime.jsxDEV(_jsxDevRuntime.Fragment, {
+        children: [
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("p", {
+                children: [
+                    " ",
+                    reply.sender,
+                    " "
+                ]
+            }, void 0, true, {
+                fileName: "src/components/Reply.js",
+                lineNumber: 23,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("p", {
+                children: reply.content
+            }, void 0, false, {
+                fileName: "src/components/Reply.js",
+                lineNumber: 24,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("button", {
+                onClick: upVote,
+                children: "Up-vote"
+            }, void 0, false, {
+                fileName: "src/components/Reply.js",
+                lineNumber: 27,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("p", {
+                children: votes
+            }, void 0, false, {
+                fileName: "src/components/Reply.js",
+                lineNumber: 28,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("button", {
+                onClick: downVote,
+                children: "Down-vote"
+            }, void 0, false, {
+                fileName: "src/components/Reply.js",
+                lineNumber: 29,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_inputDefault.default, {
+                posts: state,
+                setPosts: setState
+            }, void 0, false, {
+                fileName: "src/components/Reply.js",
+                lineNumber: 30,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_postListDefault.default, {
+                posts: state
+            }, void 0, false, {
+                fileName: "src/components/Reply.js",
+                lineNumber: 31,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true));
+};
+_s(Reply, "YvSUw/Q1vLwJIi+xTlsTvW2CN+g=");
+_c = Reply;
+exports.default = Reply;
+var _c;
+$RefreshReg$(_c, "Reply");
+
+  $parcel$ReactRefreshHelpers$0dea.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./Input":"irpU3","./PostList":"eNUXk"}]},["kn9T2","7nZVA","8lqZg"], "8lqZg", "parcelRequire37d1")
 
 //# sourceMappingURL=index.975ef6c8.js.map

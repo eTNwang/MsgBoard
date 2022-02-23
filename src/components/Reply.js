@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
+import Input from './Input'
+import PostList from './PostList'
 
 
 
-const Reply = ({ post: reply}) => {
-  const [replies, setReplies] = React.useState(
+const Reply = ({ reply, setReply}) => {
+  const [state, setState] = React.useState(
     [])
 
   const [votes, setVotes] = useState(0)
@@ -25,9 +27,9 @@ const Reply = ({ post: reply}) => {
     <button onClick={upVote}>Up-vote</button>
     <p>{votes}</p>
     <button onClick={downVote}>Down-vote</button>
-    <Input posts = {replies} setPosts = {setReplies} />
+    <Input posts = {state} setPosts = {setState} />
       <PostList posts= 
-      { replies}/>
+      { state}/>
     </>
   )
 }

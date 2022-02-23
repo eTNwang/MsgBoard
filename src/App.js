@@ -7,6 +7,8 @@ import PostList from './components/PostList'
 const App = () => {
   const [posts, setPosts] = React.useState(
      []
+
+     ///SHOULD STORE EVERYTHING, REPLIES AND ALL
 )
 
   return (
